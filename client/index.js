@@ -1,6 +1,5 @@
 
 const getAllProducts= async (e)=>{
-    // const res=await fetch('https://dummyjson.com/products').then(res=>res.json());
     const data=await fetch('https://dummyjson.com/products').then(res=>res.json());
     return data;
 }
@@ -8,7 +7,6 @@ const getAllProducts= async (e)=>{
 const startApplication= async(e)=>{
     const {products}=await getAllProducts();
     console.log(products);
-
     //Update the first category component
     const category=document.querySelector('.category');
 
@@ -74,5 +72,5 @@ const startApplication= async(e)=>{
 
 
 
-}
+};
 startApplication();
